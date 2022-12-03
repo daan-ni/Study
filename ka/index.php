@@ -1,11 +1,3 @@
-<?php
-  $host = '216.158.230.154';
-  $dbname = 'wsboxnet_pibd';
-  $username = 'wsboxnet_pibd';
-  $password = 'wsboxnet_pibd';
-
-  $pdo = new PDO("sqlite:host=$host:$dbname",$username,$password);
-?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -15,40 +7,14 @@
 
 </head>
 <body>
-  
 <!-- partial:index.partial.html -->
 <main>
     <div class="device">
         <header>
             <h1><strong>CSS</strong>Presso</h1>
-          <?php 
-            ////////
-            ?>
         </header>
         <section>
-
-            <form method="POST" action="conexao.php">
-<?php
-   include "sqlite.php";
-
-$nome=$_POST["nome"];
-$descricao=$_POST["descricao"];
-$quantidade=$_POST["number"];
-
-$sql="INSERT INTO cafe_grupo3 VALUES ('$nome', $descricao, $quantidade)";
-$db_query($db,$sql);
-
-?>
-                <label>Nome: </label>
-    <input type="text" name="nome" placeholder="Inserir nome do café"><br><br>
-
-            <label>Descrição: </label>
-    <input type="text" name="descricao" placeholder="Inserir descrição do café"><br><br>
-
-            <label>Quantidade: </label>
-    <input type="submit" name="number" placeholder="Quantos cafés"><br><br>
-
-    <input type="submit" value="Cadastrar" >
+            <form>            
                 <input type="radio" name="coffeeType" id="espresso">
                 <input type="radio" name="coffeeType" id="doppio">
                 <input type="radio" name="coffeeType" id="macchiatto">
